@@ -36,7 +36,7 @@ helper = \relative {
   <>^"Vln"
   a,8 r e'16.\pp-.( a32-.) gis16.-. a32-.
   h16.-- a32-. cis8-- e,16.-.( a32-.) gis16.-. a32-.
-  h16.--_> gis32-. a8-- e,16.-.( a32-.) gis16.-. a32-.
+  h16.--_> gis32-. a8-- e16.-.( a32-.) gis16.-. a32-.
   R2*5
 
   % Posément
@@ -53,7 +53,7 @@ helper = \relative {
 
   % Nr. 11 Posément
   \time 6/8
-  eis8\f(_\markup{\tiny \italic "lourd"} fis8 8-- 4-- 8--
+  eis8(_\markup{\dynamic f \tiny \italic "lourd"} fis8) 8-- 4-- 8--
   \grace {h16( cis} h8--) ais-- h-- \acciaccatura his8 cis4.
   R2.*11
 
@@ -66,9 +66,9 @@ helper = \relative {
   32\! fis16.) 32( e16.) 32\>( dis16.) 4.\p~
   4 r8_\markup{\dynamic "mf" \italic "augmentes"} eis''8(\( fis) fis--\)
   \acciaccatura gis8 fis-- e-- dis-- dis16( gis) gis4
-  \acciaccatura a8 gis2\trill
-  2\trill
-  R2
+  \acciaccatura a8 gis2.\trill
+  2.\trill
+  R2.
 
   % Nr. 13 Plus vite
 } \addQuote "q_helper" \helper
@@ -78,17 +78,28 @@ common = {
   \time 4/4
   \tempo "Modéré"
   \compressEmptyMeasures
-  \override MultiMeasureRest.expand-limit = #5
+  \override MultiMeasureRest.expand-limit = #4
   \partial 8
   r8
-  R1*8 <>\fermata
+  <>-\tweak X-offset #8 \fermata
+  R1*8
 
   \mark #1
-  R1*8 <>\fermata
+  <>-\tweak X-offset #8 \fermata
+  R1*8
 
   \mark #2
   \tempo "Très vite"
-  \cueDuring "q_helper" UP s1
+  <<
+    \new CueVoice {
+      \oneVoice
+      \quoteDuring "q_helper" s1
+    }
+    \context Voice = "tpvc" {
+      \voiceTwo
+      R1
+    }
+  >>
   R1*8
 
   \mark #3
@@ -103,11 +114,29 @@ common = {
   \mark #5
   R2.*7
 
-  \mark #6 \section \time 2/4 \tempo "Mème temps" 4=4.
-  \cueDuring "q_helper" UP s2*2
+  \mark #6 \section \time 2/4 \tempo \markup {"Mème temps" \tiny { \note { 4 } #UP "=" \note { 4.} #UP }}
+  <<
+    \new CueVoice {
+      \oneVoice
+      \quoteDuring "q_helper" s2*2
+    }
+    \context Voice = "tpvc" {
+      \voiceTwo
+      R2*2
+    }
+  >> \oneVoice
   R2*6
   \tempo "Plus vite"
-  \cueDuring "q_helper" s2*3
+  <<
+    \new CueVoice {
+      \oneVoice
+      \quoteDuring "q_helper" s2*3
+    }
+    \context Voice = "tpvc" {
+      \voiceTwo
+      R2*3
+    }
+  >> \oneVoice
   R2*5
 
   \mark #7 \section \time 6/8 \tempo "Posément"
@@ -119,16 +148,47 @@ common = {
   \mark #9
   R2.*7
 
-  \mark #10 \section \time 2/4 \tempo "Mème temps" 4=4.
-  \cueDuring "q_helper" s2*3
+  \mark #10 \section \time 2/4 \tempo \markup {"Mème temps" \tiny { \note { 4 } #UP "=" \note { 4.} #UP }}
+  <<
+    \new CueVoice {
+      \oneVoice
+      \quoteDuring "q_helper" s2*3
+    }
+    \context Voice = "tpvc" {
+      \voiceTwo
+      \tweak staff-position #-9 R2*3
+    }
+  >> \oneVoice
   R2*6
 
   \mark #11 \section \time 6/8 \tempo "Posément"
-  \cueDuring "q_helper" s2.*2
+  <<
+    \new CueVoice {
+      \oneVoice
+      \quoteDuring "q_helper" s2.*2
+    }
+    \context Voice = "tpvc" {
+      \voiceOne
+      R2.
+      \voiceTwo
+      R2.
+    }
+  >> \oneVoice
   R2.*11
 
   \mark #12
-  \cueDuring "q_helper" s2.*9
+  <<
+    \new CueVoice {
+      \oneVoice
+      \quoteDuring "q_helper" s2.*9
+    }
+    \context Voice = "tpvc" {
+      \voiceOne
+      R2.*5
+      \voiceTwo
+      R2.*4
+    }
+  >> \oneVoice
 }
 
 pistonI = {
@@ -145,5 +205,19 @@ pistonI = {
 }
 
 \score {
-  \pistonI
+  \new Staff = "tpstaff" {
+    \context Voice = "tpvc" {
+      \pistonI
+    }
+  }
+}
+\layout {
+  \context {
+    \Score
+    rehearsalMarkFormatter = #format-mark-box-numbers
+    quotedCueEventTypes = #'(note-event rest-event tie-event
+                             beam-event tuplet-span-event
+                             dynamic-event slur-event
+                             articulation-event)
+  }
 }
