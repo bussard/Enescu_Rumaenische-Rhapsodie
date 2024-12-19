@@ -1,8 +1,12 @@
 \version "2.24.3"
+\language "deutsch"
 
 cuevc = \relative {
-  \transposition a'
-  r8
+  \transposition c''
+  \time 4/4
+  \key a \major
+  \compressEmptyMeasures
+  \partial 8 r8
   R1*16
   % Nr. 2 Très vite
   <>^"Fl."
@@ -50,8 +54,8 @@ cuevc = \relative {
   eis8(\( fis) fis--\) \acciaccatura gis8 fis--\dim e-- dis--
   dis16( gis) gis4(~ 4.\<~
   32\! fis16.) 32( e16.) 32\>( dis16.) 4.\p~
-  4 r8_\markup{\dynamic "mf" \italic "augmentes"} eis''8(\( fis) fis--\)
-  \acciaccatura gis8 fis-- e-- dis-- dis16( gis) gis4
+  dis!4 r8_\markup{\dynamic "mf" \italic "augmentes"} eis''8(\( fis) fis--\)
+  \acciaccatura gis8 fis-- e!-- dis-- dis16( gis) gis4
   \acciaccatura a8 gis2.\trill
   2.\trill
   R2.
@@ -67,7 +71,7 @@ cuevc = \relative {
   R2*12
 
   % Nr. 16
-  <>^"Cl."\mf
+  <>^"Clar."\mf
   cis,8-. e-. h8.\trill-> a16-.
   cis8-. a-. e-. a-.
   <>^"Fl."\p
@@ -80,12 +84,11 @@ cuevc = \relative {
 
   % Nr. 18
   <>^"Fl."
-  \ottava #1
   cis'16( d e fis g! fis g fis
   \repeat tremolo 4 { g!16 fis }
   g! fis g fis g fis e d
   cis8) r r4
-  \ottava #0
+
   R2*11
 
   <>^"Picc."(
@@ -96,4 +99,109 @@ cuevc = \relative {
   \ottava #0
 
   % Nr. 19 Très vif
-} \addQuote "cues" \cuevc
+  R2*16
+
+  % Nr. 20
+  R2*16
+
+  % Nr. 21
+  R2*8
+  <>^"Vln."
+  \relative {
+    cis''4-- \tuplet 3/2 { e8( d) cis-- }
+    \tuplet 3/2 { cis( h) a-- } e'4--
+    cis-- \tuplet 3/2 { e8( d) cis-- }
+    \tuplet 3/2 { cis( h) a-- } a'4--
+    cis,-- \tuplet 3/2 { e8( d) cis-- }
+    \tuplet 3/2 { cis( h) a-- }
+    r4
+  }
+
+  % Nr. 22
+  R2*12
+  <>^"Vln."
+  \relative {
+    dis''8-. e-. fis\trill^- e-.
+    d!-. cis-. his-. cis-.
+    dis-. e-. fis\trill^-_> e-.
+    d! cis-. his-. cis-.
+  }
+
+  % Nr. 23
+  R2*24
+
+  % Nr. 24
+  R2*16
+
+  % Nr. 25
+  R2*16
+
+  % Nr. 26
+  R2*16
+
+  % Nr. 27
+  R2*12
+
+  % Nr. 28
+  R2*16
+
+  % Nr. 29
+  R2*19
+  <>^"Vln."
+  \relative {
+     dis'''4:32 d:32
+     cis:32 c:32
+     h:32 b:32
+     a2:32
+     a8 r r4
+  }
+
+  % Nr. 30
+  R2*16
+
+  % Nr. 31
+  <>^"Fl."
+  \relative {
+     <fis'' h>8.\mp-- 16-. 8-- 8--
+     4.-- <fis fis'>8-.
+  }
+  R2*14
+
+  % Nr. 32
+  R2*11
+
+  % Nr. 33
+  R2*6
+  <>^"Vln."
+  \relative {
+     r8 des'_\markup {\dynamic fff \italic "marqué"} es f
+     ges8. f16 as8 f
+     ges es f des
+     c!8. <c' c'>16-. 8-. 8-.
+  }
+  R2*7
+
+  % Nr. 34
+  R2*20
+  <>^"Fl./Cl."
+  \relative {
+     r4 gis''8\ff-. a-.
+     h-. a-. h-. a-.
+
+     % Nr. 35
+     h-. c-. d-. c-.
+     h-. a-. gis-. a-.
+  }
+  R2*11
+  <>^"Fl./Cl."
+  \relative {
+
+     e'''4-.-- d8-. c-.
+     h-. a-. g-. f-.
+  }
+
+
+
+} \addQuote "cues" \transpose c' a \cuevc
+
+% \score { \cuevc }
