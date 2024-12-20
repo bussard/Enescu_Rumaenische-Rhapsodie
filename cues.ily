@@ -202,6 +202,8 @@ cuevc = \relative {
 
 
 
-} \addQuote "cues" \transpose c' a \cuevc
+}
+\addQuote "cuesA" \transpose c' a \cuevc
+\addQuote "cues" \cuevc
 
 % \score { \cuevc }

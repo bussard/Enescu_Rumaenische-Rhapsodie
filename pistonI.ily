@@ -31,7 +31,7 @@ pistonI = {
     <<
       \new CueVoice {
         \oneVoice
-        \quoteDuring "cues" s2*4
+        \quoteDuring "cuesA" s2*4
       }
       \context Voice = "pIvc" {
         \voiceTwo
@@ -48,7 +48,7 @@ pistonI = {
     <<
       \new CueVoice {
         \oneVoice
-        \quoteDuring "cues" s2*4
+        \quoteDuring "cuesA" s2*4
       }
       \context Voice = "pIvc" {
         \voiceTwo
@@ -59,7 +59,7 @@ pistonI = {
     <<
       \new CueVoice {
         \oneVoice
-        \quoteDuring "cues" s2*5
+        \quoteDuring "cuesA" s2*5
       }
       \context Voice = "pIvc" {
         \voiceTwo
@@ -112,7 +112,7 @@ pistonI = {
     <<
       \new CueVoice {
         \oneVoice
-        \quoteDuring "cues" { s2*5 s4 }
+        \quoteDuring "cuesA" { s2*5 s4 }
       }
       \context Voice = "pIvc" {
         \voiceTwo
@@ -126,7 +126,7 @@ pistonI = {
     <<
       \new CueVoice {
         \oneVoice
-        \quoteDuring "cues" s2*4
+        \quoteDuring "cuesA" s2*4
       }
       \context Voice = "pIvc" {
         \voiceTwo
@@ -233,7 +233,7 @@ pistonI = {
     <<
       \new CueVoice {
         \oneVoice
-        \quoteDuring "cues" s2*3
+        \quoteDuring "cuesA" s2*3
       }
       \context Voice = "pIvc" {
         \voiceTwo
@@ -263,7 +263,7 @@ pistonI = {
     <<
       \new CueVoice {
         \oneVoice
-        \quoteDuring "cues" s2*2
+        \quoteDuring "cuesA" s2*2
       }
       \context Voice = "pIvc" {
         \voiceTwo
@@ -293,7 +293,7 @@ pistonI = {
     <<
       \new CueVoice {
         \oneVoice
-        \quoteDuring "cues" s2*4
+        \quoteDuring "cuesA" s2*4
       }
       \context Voice = "pIvc" {
         \voiceTwo
@@ -315,7 +315,7 @@ pistonI = {
     <<
       \new CueVoice {
         \oneVoice
-        \quoteDuring "cues" s2*4
+        \quoteDuring "cuesA" s2*4
       }
       \context Voice = "pIvc" {
         \voiceTwo
@@ -330,7 +330,7 @@ pistonI = {
     <<
       \new CueVoice {
         \oneVoice
-        \quoteDuring "cues" s2*2
+        \quoteDuring "cuesA" s2*2
       }
       \context Voice = "pIvc" {
         \voiceTwo

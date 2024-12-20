@@ -20,7 +20,7 @@ common = {
   <<
     \new CueVoice {
       \oneVoice
-      \quoteDuring "cues" s1
+      \quoteDuring "cuesA" s1
     }
     \context Voice = "tpvc" {
       \voiceTwo
@@ -45,7 +45,7 @@ common = {
   <<
     \new CueVoice {
       \oneVoice
-      \quoteDuring "cues" s2*2
+      \quoteDuring "cuesA" s2*2
     }
     \context Voice = "tpvc" {
       \voiceTwo
@@ -57,7 +57,7 @@ common = {
   <<
     \new CueVoice {
       \oneVoice
-      \quoteDuring "cues" s2*3
+      \quoteDuring "cuesA" s2*3
     }
     \context Voice = "tpvc" {
       \voiceTwo
@@ -79,7 +79,7 @@ common = {
   <<
     \new CueVoice {
       \oneVoice
-      \quoteDuring "cues" s2*3
+      \quoteDuring "cuesA" s2*3
     }
     \context Voice = "tpvc" {
       \voiceTwo
@@ -92,7 +92,7 @@ common = {
   <<
     \new CueVoice {
       \oneVoice
-      \quoteDuring "cues" s2.*2
+      \quoteDuring "cuesA" s2.*2
     }
     \context Voice = "tpvc" {
       \voiceOne
@@ -107,7 +107,7 @@ common = {
   <<
     \new CueVoice {
       \oneVoice
-      \quoteDuring "cues" s2.*9
+      \quoteDuring "cuesA" s2.*9
     }
     \context Voice = "tpvc" {
       \voiceOne
