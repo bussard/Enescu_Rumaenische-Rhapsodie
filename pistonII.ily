@@ -2,7 +2,8 @@
 
 pistonII = {
   \transposition a'
-  \common |
+
+  \transpose c' a \common |
   <>^"Pist."
   \relative {
     \afterGrace dis'2.\p\<( { e8 }

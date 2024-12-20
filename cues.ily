@@ -2,7 +2,7 @@
 \language "deutsch"
 
 cuevc = \relative {
-  \transposition c''
+  \transposition c'
   \time 4/4
   \key a \major
   \compressEmptyMeasures

@@ -20,11 +20,13 @@
 \include "pistonI.ily"
 \include "pistonII.ily"
 
+trumpetI = \relative {
+   \transposition c'
+   \common
+}
+
 \score {
   <<
-  %   \new Staff = "cue" {
-  %     \cuevc
-  %   }
     \new StaffGroup \with {
       instrumentName = "Pistons"
       midiInstrument = "trumpet"
@@ -40,8 +42,23 @@
           \transpose c' a \pistonII
         }
       }
-
     >>
+%     \new StaffGroup \with {
+%       instrumentName = "Trumpets"
+%       midiInstrument = "trumpet"
+%     }
+%     <<
+%       \new Staff = "tpIstaff" {
+%         \context Voice = "tpIvc" {
+%           \transpose c' a \trumpetI
+%         }
+%       }
+%       \new Staff = "tpIIstaff" {
+%         \context Voice = "tpIIvc" {
+%           \transpose c' a \trumpetII
+%         }
+%       }
+%    >>
   >>
 
   \layout {

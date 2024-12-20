@@ -2,6 +2,7 @@
 
 pistonI = {
   \transposition a'
+
   \common
   <>^"Pist."
   \relative {

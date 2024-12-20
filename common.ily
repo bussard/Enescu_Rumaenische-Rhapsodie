@@ -2,6 +2,8 @@
 
 
 common = {
+  \transposition c'
+
   \time 4/4
   \tempo "Modéré"
   \compressEmptyMeasures
@@ -20,7 +22,7 @@ common = {
   <<
     \new CueVoice {
       \oneVoice
-      \quoteDuring "cuesA" s1
+      \quoteDuring "cues" s1
     }
     \context Voice = "tpvc" {
       \voiceTwo
@@ -45,7 +47,7 @@ common = {
   <<
     \new CueVoice {
       \oneVoice
-      \quoteDuring "cuesA" s2*2
+      \quoteDuring "cues" s2*2
     }
     \context Voice = "tpvc" {
       \voiceTwo
@@ -57,7 +59,7 @@ common = {
   <<
     \new CueVoice {
       \oneVoice
-      \quoteDuring "cuesA" s2*3
+      \quoteDuring "cues" s2*3
     }
     \context Voice = "tpvc" {
       \voiceTwo
@@ -79,7 +81,7 @@ common = {
   <<
     \new CueVoice {
       \oneVoice
-      \quoteDuring "cuesA" s2*3
+      \quoteDuring "cues" s2*3
     }
     \context Voice = "tpvc" {
       \voiceTwo
@@ -92,7 +94,7 @@ common = {
   <<
     \new CueVoice {
       \oneVoice
-      \quoteDuring "cuesA" s2.*2
+      \quoteDuring "cues" s2.*2
     }
     \context Voice = "tpvc" {
       \voiceOne
@@ -107,7 +109,7 @@ common = {
   <<
     \new CueVoice {
       \oneVoice
-      \quoteDuring "cuesA" s2.*9
+      \quoteDuring "cues" s2.*9
     }
     \context Voice = "tpvc" {
       \voiceOne
