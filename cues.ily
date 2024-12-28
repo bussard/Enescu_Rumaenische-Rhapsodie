@@ -27,16 +27,20 @@ cuevc = \relative {
   a,8 r e'16.\pp-.( a32-.) gis16.-. a32-.
   h16.-- a32-. cis8-- e,16.-.( a32-.) gis16.-. a32-.
   h16.--_> gis32-. a8-- e16.-.( a32-.) gis16.-. a32-.
-  R2*5
+  h16.-- a32-. cis8-- e16.-.( d32-.) cis16.-. h32-.
+  \tuplet 3/2 { d16_>(cis) h-- } a8---. \grace { fis16^( e dis } e16.-. a32-.) gis16.-. a32-.
+  h16.-- a32-. cis8-- \grace { fis,16^( e dis } e16.-. a32-.) gis16.-. a32
+  h16.-- gis32-. a8-- \grace { fis16^( e dis } e16.-. a32-.) gis16.-. a32
+  h16.-- a32-. cis8( e16-.) \tweak staff-position #7 r16 s8 |
 
-  % Posément
+  % Nr. 7 Posément
   \time 6/8
-  R2.*24
+  R2.*24 |
 
   % Nr. 10 Mème temps
   <>^"Vln."
   \time 2/4
-  a,4\p(~ 16. gis32-.) a16.-.( ais32-.)
+  a,,4\p(~ 16. gis32-.) a16.-.( ais32-.) |
   h4(~ 16. cis32-.) d16.-.( e32-.)
   cis8.--( h16--) \tuplet 3/2 { d16( cis) h-- } a8--
   R2*6
