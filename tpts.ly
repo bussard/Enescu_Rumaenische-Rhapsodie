@@ -200,10 +200,162 @@ trumpetI = \relative {
       \repeat percent 4 R2 R2_\markup {\italic "précipitez" }
     }
   >> \oneVoice
+  \ottava #0
 
   \mark #19 \section \tempo "Très vif"
   <>^"Trp."
+  \relative {
+    \grace {g''16( gis} a8\fff-.) r e,-- r
+    \repeat unfold 3 { r4 e8-- r }
+    a'-. r e,-- r
+    \repeat unfold 2 { r4 e8-- r }
+    e4-- r
+    a'8-. r e,-- r
+    \repeat unfold 3 { r4 e8-- r }
+    a'8-. r e,-- r
+    \repeat unfold 2 { r4 e8-- r }
+    e4-- r
 
+    \mark #20
+    \repeat unfold 2 {
+      h'8.-- 16-. 8-- 8--
+      4.-- r8
+      R2*2
+    }
+    a'8\ff-. r e,-- r
+    r4 e8-- r
+    R2
+    r4 e--
+    a'8-. r e,-- r
+    r4 e8-- r
+    R2
+    r4 e--
+  }
+
+  \mark #21
+  R2*10
+  <<
+    \new CueVoice {
+      \oneVoice
+      \quoteDuring "cues" { s2*3 s4 }
+    }
+    \context Voice = "tpvc" {
+      \voiceTwo
+      R2*3
+      r4
+    }
+  >> \oneVoice <>^"Trp." e8\sff-. r
+
+  \mark #22
+  R2*14
+  <<
+    \new CueVoice {
+      \oneVoice
+      \quoteDuring "cues" { s2*2 }
+    }
+    \context Voice = "tpvc" {
+      \voiceTwo
+      R2*2
+    }
+  >> \oneVoice
+
+  \mark #23
+  <>^"Trp."
+  \relative {
+     \acciaccatura dis''8 e2\ff--~
+     e
+     \repeat unfold 3 {
+       e--~
+       e
+     }
+     \repeat unfold 2 {
+       d--~
+       2
+     }
+     \after 4 \>
+     d--~
+     2~
+     2~
+     2
+     d4\p--\< 4--
+     4-- 4--
+     4-- 4--
+     4-- 4--
+     cis2\ff--~
+     2~
+     2~
+     2
+
+     \mark #24
+     c!8\sff-. r r4
+     a,4\mp-- r
+     R2
+     a4-- r
+     dis'8\mf-. e-. h-. c-.
+     dis-. e-. fis-. g-.
+     dis-. e-. h-. c-.
+     dis-. e-. fis-. g-.
+     R2*4
+     c,,2\p\<~
+     2~
+     2~
+     2
+
+     \mark #25
+     \startMeasureCount
+     cis2\!_\markup {\dynamic pp \italic sub.}~
+     2~
+     2~
+     2~
+     2~
+     2 \stopMeasureCount
+     R2*2
+     \startMeasureCount
+     a'2\p~
+     2~
+     2~
+     2~
+     2~
+     2 \stopMeasureCount
+     R2*2
+
+     \mark #26
+     cis2\mf\<~
+     2~
+     2
+     R2\!
+     e2\ff--~
+     2~
+     2~
+     2
+     d4\mf\<-- 4--
+     4-- 4--
+     4-- 4--
+     4-- 4--
+     2\ff--~
+     2~
+     2~
+     \after 4 \> 2
+
+     \mark #27
+     d8\f-. r r4
+     d,\mp-- r
+     R2
+     d4-- r
+     R2
+     d4\> r
+     R2
+     d4-- r\!
+     d'2\p\<--~
+     2
+     2--~
+     2
+
+     \mark #28
+     c8\f-. r a,4\mp--
+
+
+  }
 }
 
 \score {
