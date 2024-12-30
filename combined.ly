@@ -13,50 +13,38 @@
   composer = "Georges Enescu"
   opus = "Op. 11"
   tagline = ##f
+  poet = "Trompete II / Piston II in C"
 }
 
+irgendwas = \relative { c4 d e f g a h c }
 \include "cues.ily"
 \include "common.ily"
 \include "pistonI.ily"
 \include "pistonII.ily"
 \include "trumpetI.ily"
 \include "trumpetII.ily"
+\include "combinedI.ily"
+\include "combinedII.ily"
 
 \score {
-  <<
+
     \new StaffGroup \with {
-      instrumentName = "Pistons"
       midiInstrument = "trumpet"
     }
     <<
-      \new Staff = "pIstaff" {
-        \context Voice = "pIvc" {
-          \transpose c' a \pistonI
+      \new Staff = "tIStaff" {
+        \context Voice = "tI" {
+          \combI
         }
       }
-      \new Staff = "pIIstaff" {
-        \context Voice = "pIIvc" {
-          \transpose c' a \pistonII
+      \new Staff = "tIIStaff" {
+        \context Voice = "tII" {
+          \combII
         }
       }
     >>
-    \new StaffGroup \with {
-      instrumentName = "Trumpets"
-      midiInstrument = "trumpet"
-    }
-    <<
-      \new Staff = "tpIstaff" {
-        \context Voice = "tpIvc" {
-          \trumpetI
-        }
-      }
-      \new Staff = "tpIIstaff" {
-        \context Voice = "tpIIvc" {
-          \trumpetII
-        }
-      }
-   >>
-  >>
+
+
 
   \layout {
     \context {
