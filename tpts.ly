@@ -221,7 +221,7 @@ trumpetII = \relative {
   \relative {
     <>\fff
     \repeat unfold 2 {
-      e''8-. r cis,-- r
+      \grace {s8} e''8-. r cis,-- r
       r4 cis8-- r
       r4 d8-- r
       r4 cis8-- r
@@ -286,7 +286,7 @@ trumpetII = \relative {
   \mark #23
   <>^"Trp."
   \relative {
-     cis''\ff--~
+     \grace s8 cis''2\ff--~
      2
      \repeat unfold 3 {
        2--~
@@ -464,205 +464,215 @@ trumpetII = \relative {
     \new CueVoice {
      \oneVoice
      \quoteDuring "cues" { s2*2 s4. }
+
+     \new CueVoice {
+      \voiceOne <>^"Trp. I"
+       des8^^
+       eses^^ f^^ ges^^ r
+     }
+    }
+    \context Voice = "tpIIvc" {
+     \voiceTwo
+     R2*3
+
+     \mark #33
+     r4_\markup {\italic bouchée }
+     \oneVoice des,4\ff-.--_+
+    }
+  >> \oneVoice
+  eses-.--_+ f-.--_+
+  ges-.--_+ f-.--_+
+  as2\accent_+~
+  8 r ges4-.--_+
+  r4 f\accent_+~
+  4 r
+  R2*2
+   g8.\fff-+ 16-+ 8-+ 8-+
+   8-+ 8-+ 4-+
+   R2*2
+   a8.\fff-+ 16-+ 8-+ 8-+
+   8-+ 8-+ 4-+
+   R2*2
+
+  \mark #34
+  R2*3
+  <<
+    \new CueVoice {
+     \oneVoice
+     \quoteDuring "cues" { s2*3 }
+    }
+    \context Voice = "tpIIvc" {
+     \voiceTwo
+     R2*3
+    }
+  >> \oneVoice
+  <>^"Trp."
+  \relative {
+     e'8\ff_+ f_+ gis_+ f_+
+     gis_+ f_+ gis-+ a-+
+     h-+ a-+ gis_+ fis_+
+     gis4-+ 8-+ r
+     e_+ f!_+ gis_+ a_+
+     h_+ a_+ gis_+ a_+
+     gis8_+ f_+ gis_+ a_+
+     gis4_+ e'-+
+     d8-+ c-+ h_+ a_+
+     g_+ fis_+ g4_+
+     d8_+ e_+ fis_+ a_+
+     g4_+ d_+
+     h'8_+ a_+ g_+ d_+
+     h_+ d_+ h4_+
+     a8_+ cis_+ d_+ a_+
+     gis4_+ 4_+
+
+     \mark #35
+     e'8_+ f_+ gis_+ f_+
+     \repeat unfold 2 { gis_+ f_+ e_+ f_+ }
+     e_+ f_+ gis4_+
+     e8_+ r_\markup {\italic \column { "rouvrez vite"
+                                       "les tromp." }}^"open" r4
+     R2*8
+  }
+  <<
+    \new CueVoice {
+     \oneVoice
+     \quoteDuring "cues" { s2*2 }
     }
     \context Voice = "tpIIvc" {
      \voiceTwo
      R2*2
-     r4 r8
     }
   >> \oneVoice
+  <>^"Trp."_"ouvertes"
   \relative {
-     des''8^^_\markup {\dynamic ff \italic bouchée }
-     eses^^ f^^ ges^^ r
+     r8. e''32\ff-. 32-. \tuplet 3/2 { 8-. 8-. 8-. }
+     <>^\markup {\halign #-0.5 ...... }
+     \repeat unfold 3 { \tuplet 6/4 4 { 2.:8 } }
+
+     \mark #36
+     \grace s8 fis2--~
+     2
+     2--~
+     2
+     d,--~
+     2
+     2--~
+     2
+     \startMeasureCount
+     2\>--~
+     2~
+     2~
+     2~
+     2\mp \stopMeasureCount
+     a4\<-- a'4--
+     4-- 4--
+     4-- 4--
+     2\ff--~
+     2~
+     2~
+     2
+
+     \mark #37
+     a8\sff-. r r4
+     a,8\sff-. r r4
+     h'8\f-. c-. gis-. a-.
+     h-. c-. dis-. e-.
+     h16-. 16-. c8-. gis16-. 16-. a8-.
+     h16-. 16-. c8-. dis16-. 16-. e8-.
+     h-. c-. gis-. a-.
+     h-. c-. dis-. e-.
      R2*8
-     c,8.\fff-+ 16-+ 8-+ 8-+
-     8-+ 8-+ 4-+
+     \startMeasureCount
+     cis,2\f~
+     2~
+     2~
+     2\<~
+     2~
+     2 \stopMeasureCount <>\!
      R2*2
-     d8.\fff-+ 16-+ 8-+ 8-+
-     8-+ 8-+ 4-+
-     R2*2
+
+     \mark #38
+     \startMeasureCount
+     a2\fff~
+     2~
+     2~
+     2~
+     2~
+     2 \stopMeasureCount
+     R2*9
   }
-%
-%   \mark #34
-%   R2*3
-%   <<
-%     \new CueVoice {
-%      \oneVoice
-%      \quoteDuring "cues" { s2*3 }
-%     }
-%     \context Voice = "tpIIvc" {
-%      \voiceTwo
-%      R2*3
-%     }
-%   >> \oneVoice
-%   <>^"Trp."
-%   \relative {
-%      gis'8\ff_+ a_+ h_+ a_+
-%      h_+ a_+ h-+ c-+
-%      d-+ c-+ h_+ a_+
-%      h4-+ e8-+ r
-%      gis,_+ a_+ h-+ c16-+ c-+
-%      d8-+ c16-+ c-+ d8-+ c16-+ c-+
-%      d8-+ c-+ h_+ a_+
-%      h4-+ e-+
-%      d8-+ c-+ h_+ a_+
-%      g_+ fis_+ g4_+
-%      d8_+ e_+ fis_+ a_+
-%      g4_+ e'-+
-%      d8-+ c-+ h_+ a_+
-%      g_+ fis_+ g4_+
-%      d8_+ e_+ f!_+ d_+
-%      e4_+ 4_+
-%
-%      \mark #35
-%      gis8_+ a_+ h-+ c-+
-%      d-+ c-+ d-+ c-+
-%      d-+ c-+ h_+ a_+
-%      gis_+ a_+ h4-+
-%      e8-+ r_\markup {\italic \column { "rouvrez vite"
-%                                        "les tromp." }}^"open" r4
-%      R2*8
-%   }
-%   <<
-%     \new CueVoice {
-%      \oneVoice
-%      \quoteDuring "cues" { s2*2 }
-%     }
-%     \context Voice = "tpIIvc" {
-%      \voiceTwo
-%      R2*2
-%     }
-%   >> \oneVoice
-%   <>^"Trp."_"ouvertes"
-%   \relative {
-%      r8. e''32\ff-. 32-. \tuplet 3/2 { 8-. 8-. 8-. }
-%      <>^\markup {\halign #-0.5 ...... }
-%      \repeat unfold 3 { \tuplet 6/4 4 { 2.:8 } }
-%
-%      \mark #36
-%      \acciaccatura gis8 a2--~
-%      2
-%      2--~
-%      2
-%      d,--~
-%      2
-%      2--~
-%      2
-%      \startMeasureCount
-%      2\>--~
-%      2~
-%      2~
-%      2~
-%      2\mp \stopMeasureCount
-%      4\<-- 4--
-%      4-- 4--
-%      4-- 4--
-%      cis2\ff--~
-%      2~
-%      2~
-%      2
-%
-%      \mark #37
-%      c!8\sff-. r r4
-%      c,8\sff-. r r4
-%      dis'8\f-. e-. h-. c-.
-%      dis-. e-. fis-. g-.
-%      dis16-. 16-. e8-. h16-. 16-. c8-.
-%      dis16-. 16-. e8-. fis16-. 16-. g8-.
-%      dis-. e-. h-. c-.
-%      dis-. e-. fis-. g-.
-%      R2*8
-%      \startMeasureCount
-%      cis,2\f~
-%      2~
-%      2~
-%      2\<~
-%      2~
-%      2 \stopMeasureCount <>\!
-%      R2*2
-%
-%      \mark #38
-%      \startMeasureCount
-%      a2\fff~
-%      2~
-%      2~
-%      2~
-%      2~
-%      2 \stopMeasureCount
-%      R2*9
-%   }
-%
-%   \mark #39
-%   <<
-%     \new CueVoice {
-%      \oneVoice \clef bass
-%      \quoteDuring "cues" { s2*4 }
-%     }
-%     \context Voice = "tpIIvc" {
-%      \voiceTwo
-%      \tweak staff-position #-9 R2*4
-%     }
-%   >> \oneVoice
-%   <>^"Trp."
-%   \relative {
-%      \clef violin
-%      as'8.\ff-. 16-. 8-. 8-.
-%      8-. 8-. 4--
-%      f8-. r r4
-%      d-.-- g8-.-- r
-%      a'8.-. 16-. 8-. 8-.
-%      f-. r f,-. r
-%      r4 f8.-. 16-.
-%      8-. 8-. fis8-. 16-. 16-.
-%      8-. 8-. 4--
-%      h8-. ais-. a-. gis-.
-%      R2\fermata_\markup{\italic "long"}
-%   }
-%
-%   \section \time 2/2 \tempo "Allègrement"
-%   R1*11
-%   <<
-%     \new CueVoice {
-%      \oneVoice
-%      \quoteDuring "cues" { s1*4 }
-%     }
-%     \context Voice = "tpIIvc" {
-%      \voiceTwo
-%      R1*4
-%     }
-%   >> \oneVoice
-%
-%   \mark #40
-%   <>^"Trp."
-%   \relative {
-%      r4 r cis'\mf-. r
-%      cis'-. r a-. r
-%      e-. r cis'-. b-.
-%      a-. f-. e2\>\accent~
-%      \section \tempo "Très vif" \time 2/4
-%      2\p~
-%      2_\markup {\italic "augmentez et pressez"}~
-%      2~
-%      2
-%      cis'--~
-%      2~
-%      2\<~
-%      2
-%
-%      \mark #41
-%      <>\ff^\markup {\halign #-0.5 "......"}
-%      \repeat unfold 4 { \tuplet 6/4 { cis2.:8 } }
-%      e2--~
-%      2~
-%      2~
-%      2
-%      a--~
-%      2~
-%      2~
-%      2 \breathe
-%      2--\fermata_\markup {\dynamic fff \italic long}
-%   }
-%   \fine
+
+  \mark #39
+  <<
+    \new CueVoice {
+     \oneVoice \clef bass
+     \quoteDuring "cues" { s2*4 }
+    }
+    \context Voice = "tpIIvc" {
+     \voiceTwo
+     \tweak staff-position #-9 R2*4
+    }
+  >> \oneVoice
+  <>^"Trp."
+  \relative {
+     \clef violin
+     f'8.\ff-. 16-. 8-. 8-.
+     8-. 8-. 4--
+     f8-. r r4
+     d-.-- g8-.-- r
+     a8.-. 16-. 8-. 8-.
+     as-. r f-. r
+     r4 f8.-. 16-.
+     8-. 8-. fis8-. 16-. 16-.
+     8-. 8-. 4--
+     d8-. d-. dis-. e-.
+     R2\fermata_\markup{\italic "long"}
+  }
+
+  \section \time 2/2 \tempo "Allègrement"
+  R1*11
+  <<
+    \new CueVoice {
+     \oneVoice
+     \quoteDuring "cues" { s1*4 }
+    }
+    \context Voice = "tpIIvc" {
+     \voiceTwo
+     R1*4
+    }
+  >> \oneVoice
+
+  \mark #40
+  <>^"Trp."
+  \relative {
+     r4 r a\mf-. r
+     a'-. r cis,-. r
+     a-. r a'-. f-.
+     e-. b-. cis2\>\accent~
+     \section \tempo "Très vif" \time 2/4
+     2\p~
+     2_\markup {\italic "augmentez et pressez"}~
+     2~
+     2
+     a'--~
+     2~
+     2\<~
+     2
+
+     \mark #41
+     <>\ff^\markup {\halign #-0.5 "......"}
+     \repeat unfold 4 { \tuplet 6/4 { a2.:8 } }
+     cis2--~
+     2~
+     2~
+     2
+     2--~
+     2~
+     2~
+     2 \breathe
+     e2--\fermata_\markup {\dynamic fff \italic long}
+  }
+  \fine
 
 }
 

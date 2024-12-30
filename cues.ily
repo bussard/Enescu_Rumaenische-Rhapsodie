@@ -188,7 +188,13 @@ cuevc = \relative {
   R2*14
 
   % Nr. 32
-  R2*11
+  R2*8
+  <>^"Fl."
+  \relative {
+    b''8.\prall-> as16-. g8-. as-.
+    b-. ces-. b8.-.\prall-> a16-.
+    g8-. as-. b-. r8
+  }
 
   % Nr. 33
   R2*6
