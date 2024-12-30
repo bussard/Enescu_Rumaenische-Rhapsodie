@@ -69,7 +69,7 @@ pistonI = {
     >> \oneVoice \ottava #0
 
     \mark #19 \section \tempo "Très vif"
-    e8-.\fff-. r e-- r
+    \grace s8 e8-.\fff-. r e-- r
     r4 e8-- r
     \tuplet 3/2 4 { d8-. e-. f-. d-. e-. f -. }
     g4-- e8-. r
@@ -136,7 +136,7 @@ pistonI = {
     >> \oneVoice
 
     \mark #23
-    <>\ff
+    \grace s8 <>\ff
     \repeat unfold 4 {
       c2--~
       2
@@ -346,7 +346,7 @@ pistonI = {
     }
 
     \mark #36
-    f!2--~
+    \grace s8 f!2--~
     2
     2--~
     2
