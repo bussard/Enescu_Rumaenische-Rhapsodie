@@ -150,7 +150,18 @@ cuevc = \relative {
   R2*16
 
   % Nr. 29
-  R2*19
+  <>^"Hrf."
+  \relative {
+    \ottava #1
+    e''''16\p cis a e' cis a e cis'
+    a e cis a' e cis a e'
+    \ottava #0
+    cis a e cis'
+    a e cis a'
+    e cis a e'
+    cis a e cis'
+  }
+  R2*15
   <>^"Vln."
   \relative {
      dis'''4:32 d:32
@@ -161,7 +172,12 @@ cuevc = \relative {
   }
 
   % Nr. 30
-  R2*16
+  R2*14
+  <>^"Vln."
+  \relative {
+     cis''4-- \tuplet 3/2 { e8( d) cis-- }
+     \tuplet 3/2 { cis( h) a-- } a4--
+  }
 
   % Nr. 31
   <>^"Fl."
@@ -186,7 +202,14 @@ cuevc = \relative {
   R2*7
 
   % Nr. 34
-  R2*20
+  R2*3
+  <>^"Fl./Cl."
+  \relative {
+     h''8\ff cis-. h-.\prall-> gis-.
+     a-. h-. a-.\prall-> fis-.
+     gis-.\prall-> fis-. gis-. a-.
+  }
+  R2*14
   <>^"Fl./Cl."
   \relative {
      r4 gis''8\ff-. a-.
@@ -203,7 +226,41 @@ cuevc = \relative {
      e'''4-.-- d8-. c-.
      h-. a-. g-. f-.
   }
+  R2*4
 
+  % Nr. 36
+  R2*20
+
+  % Nr. 37
+  R2*24
+
+  % Nr. 38
+  R2*15
+
+  % Nr. 39
+  <>^"Basses"
+  \relative {
+     \clef bass
+     a8 gis g fis
+     f! e dis d
+     cis c h b
+     a gis g fis
+  }
+  R2*11
+
+  \time 2/2 % Allègrement
+  R1*11
+  <>^"Fl."
+  \relative {
+    \ottava #1 \clef violin
+    e'''8\f-. fis-. g!-. a-. g-. e-. f-. d-.
+    e-. c!-. d-. h-. c2->
+    \ottava #0
+    g!8-. a-. h-. d-. c!-. h-. d-. h-.
+    c-. a-. b-. g!-. a2->
+  }
+
+  % Nr. 40
 
 
 }
